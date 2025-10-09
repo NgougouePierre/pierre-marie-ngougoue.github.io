@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pierre Marie Ngougoue Ngougoue·ne</title>
-  <meta name="description" content="Page personnelle de mathématiques : Research, Teaching, Publications, Contact." />
+  <title>Pierre Marie Ngougoue Ngougoue — Mathematician</title>
+  <meta name="description" content="Personal academic page: Bio, Research in PDEs and fluid–structure interaction, Teaching, Publications, Talks, Contact." />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <!-- MathJax for LaTeX rendering -->
   <script>
@@ -35,94 +35,122 @@
     footer{margin:40px 0 10px 0; color:#a7afc4; font-size:14px}
     .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
     .badge{display:inline-block;background:rgba(122,162,255,.12);border:1px solid #2d3b6b;color:var(--accent);padding:4px 10px;border-radius:10px;font-size:12px}
+    .imgbox{border:1px dashed #2a335a;border-radius:12px;padding:12px;text-align:center;margin-top:10px}
+    .imgbox img{max-width:100%;border-radius:10px}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <!-- Remplacez la source par votre portrait (carré 512x512 recommandé) -->
-      <img class="avatar" src="portrait.jpg" alt="Portrait de Votre Nom" />
+      <!-- Replace with your portrait (square 512×512 recommended) -->
+      <img class="avatar" src="portrait.jpg" alt="Portrait of Pierre Marie Ngougoue Ngougoue" />
       <div>
         <h1>Pierre Marie Ngougoue Ngougoue</h1>
-        <div class="role">Research Assistant · Théorie des nombres · <span class="badge">Available for Seminars</span></div>
+        <div class="role">Research Assistant · Partial Differential Equations · <span class="badge">Available for seminars</span></div>
         <nav>
-          <a href="#recherche">Research</a>
+          <a href="#bio">Bio</a>
+          <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <a href="#enseignement">Teaching</a>
-          <a href="#talks">Conferences</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#talks">Talks</a>
           <a href="#contact">Contact</a>
           <a href="CV.pdf">CV</a>
         </nav>
       </div>
     </header>
 
+    <section id="bio" class="card">
+      <h2>Bio</h2>
+      <p><em>Mathematician by accident. It's been a complicated, mostly unrequited relationship ever since — I blame bad initial conditions.</em></p>
+    </section>
+
     <section class="grid">
-      <article id="recherche" class="card">
-        <h2>Recherche</h2>
-        <p>Je m'intéresse à la distribution des nombres premiers dans les progressions arithmétiques, aux formes modulaires et aux applications de la méthode du cercle. Dernier préprint : <a href="#">On gaps between primes in Beatty sequences</a> (2025).</p>
-        <h3>Preprint highlight (LaTeX rendu via MathJax)</h3>
-        <p>Nous montrons que pour tout $\epsilon>0$ il existe une infinité de $n$ tels que
-        $$ p_{n+1}-p_n \le n^{\tfrac{1}{2}+\epsilon}. $$</p>
+      <article id="research" class="card">
+        <h2>Research</h2>
+        <p>I work on the mathematical analysis of <strong>fluid–structure interactions (FSI)</strong> and related <strong>PDE</strong> systems. A current focus is <strong>barotropic compressible fluid–shell interactions</strong> and local well-posedness questions.</p>
+
+        <h3>Model equations (rendered with MathJax)</h3>
+        <p><strong>Compressible Navier–Stokes (barotropic):</strong></p>
+        <p>
+          $$\begin{aligned}
+          &\partial_t \rho + \nabla\!\cdot(\rho u)=0,\\
+          &\partial_t(\rho u) + \nabla\!\cdot(\rho u\otimes u) + \nabla p(\rho) = \mu \Delta u + (\lambda+\mu)\nabla(\nabla\!\cdot u),
+          \end{aligned}$$
+          with $p=p(\rho)$ barotropic, viscosity coefficients $\mu>0$, $\lambda+\tfrac{2}{3}\mu\ge0$.
+        </p>
+        <p><strong>Elastic shell (linear Koiter-type, schematic):</strong></p>
+        <p>
+          $$\rho_s\, \partial_{tt} \eta + \mathcal{K}\eta + \mathcal{D}\partial_t\eta = \big(\sigma(u,\rho)\, n\big)\!\cdot n \;\;\text{on }\Gamma, $$
+          where $\eta$ is the shell displacement, $\mathcal{K}$ the elastic operator, $\mathcal{D}$ damping, and the right-hand side is the normal fluid traction on the interface $\Gamma$.
+        </p>
+
+        <div class="imgbox">
+          <p><strong>FSI illustration placeholder</strong> — upload an image named <code>fsi-deformation.jpg</code> showing shell deformation under fluid load.</p>
+          <img src="fsi-deformation.jpg" alt="Fluid–structure interaction deformation illustration (placeholder)">
+        </div>
+
+        <h3>Latest preprint</h3>
+        <p>
+          Local well-posedness of barotropic compressible Fluid–Shell interactions —
+          <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>.
+        </p>
+
         <div>
-          <span class="tag">Analytique</span>
-          <span class="tag">Nombres premiers</span>
-          <span class="tag">Méthode du cercle</span>
+          <span class="tag">PDE</span>
+          <span class="tag">Fluid–Structure Interaction</span>
+          <span class="tag">Compressible flow</span>
+          <span class="tag">Well-posedness</span>
         </div>
       </article>
 
       <aside class="card">
-        <h2>Liens</h2>
+        <h2>Links</h2>
         <ul>
           <li><a href="#">Google Scholar</a></li>
           <li><a href="#">ORCID</a></li>
-          <li><a href="#">arXiv</a></li>
+          <li><a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv</a></li>
           <li><a href="#">GitHub</a></li>
         </ul>
-        <h3>Contact rapide</h3>
-        <p><span class="mono">ngougoue.pierre@aims-cameroon.org</span></p>
-        <p>Fakultät für Mathematik, Universität Duisburg-Essen,<br> Thea-Leymann Straße 9, 45127 Essen, Germany</p>
+        <h3>Quick contact</h3>
+        <p><span class="mono">ngougoue.pierre@aimS-cameroon.org</span></p>
+        <p>Fakultät für Mathematik, Universität Duisburg–Essen,<br> Thea-Leymann Straße 9, 45127 Essen, Germany</p>
       </aside>
     </section>
 
     <section id="publications" class="card">
-      <h2>Publications </h2>
-      <p class="pub"><strong>Title 1</strong> — Journal of Number Theory, 2024. Avec A. Coauthor. <a href="#">PDF</a> · <a href="#">arXiv</a></p>
-      <p class="pub"><strong>Title 2</strong> — Compositio Mathematica, 2023. <a href="#">PDF</a> · <a href="#">doi</a></p>
-      <p class="pub"><strong>Title 3</strong> — Ann. ENS, 2021. <a href="#">PDF</a></p>
+      <h2>Publications</h2>
+      <p class="pub"><strong>Local well-posedness of barotropic compressible Fluid–Shell interactions</strong> — under review (preprint: <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>).</p>
     </section>
 
-    <section id="enseignement" class="card">
+    <section id="teaching" class="card">
       <h2>Teaching</h2>
-      <ul>
-        <li>2025 — Théorie analytique des nombres (M2) — polycopié et TD <a href="#">ici</a>.</li>
-        <li>2024 — Calcul différentiel (L3) — notes <a href="#">PDF</a>.</li>
-        <li>2023 — Introduction à Python pour mathématiciens (L1) — notebooks <a href="#">GitHub</a>.</li>
-      </ul>
+      <p>I run a mathematics YouTube channel with advanced lectures presented in a more digestible way. Topics include Functional Analysis, Optimal Control, Calculus of Variations, and Stochastics.</p>
+      <p>Channel: <a href="http://www.youtube.com/@MathXploreInfinity" target="_blank" rel="noopener">@MathXploreInfinity</a></p>
     </section>
 
     <section id="talks" class="card">
-      <h2>Conferences</h2>
+      <h2>Talks</h2>
       <ul>
-        <li>Nov. 2025 — Séminaire de théorie des nombres, Université X — <a href="#">slides</a> · <a href="#">vidéo</a></li>
-        <li>Juin 2025 — Journées arithmétiques — <a href="#">abstract</a></li>
+        <li>November 2024 — Oberseminar AG Mathematische Modellierung, TU Clausthal —
+          <em>“Random elliptic quasi-variational inequalities and risk-averse optimal control”</em> —
+          <a href="slides.pdf">slides</a></li>
       </ul>
     </section>
 
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <p>Le moyen le plus simple de me joindre est par e‑mail. Pour les invitations à parler, merci d'indiquer la date, le format souhaité et le public visé.</p>
+      <p>I am easily reachable by email. Invitations for talks, collaborations, consultations, or guidance are welcome.</p>
     </section>
 
     <footer>
-      © <span id="year"></span> Pierre Marie Ngougoue Ngougoue. last updated : <span id="updated"></span> .
+      © <span id="year"></span> Pierre Marie Ngougoue Ngougoue. Last updated: <span id="updated"></span> — Built with GitHub Pages.
     </footer>
   </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const d = new Date(document.lastModified);
-    document.getElementById('updated').textContent = d.toLocaleDateString('fr-FR', {year:'numeric', month:'long', day:'2-digit'});
+    document.getElementById('updated').textContent = d.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'2-digit'});
   </script>
 </body>
 </html>
-
