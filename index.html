@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pierre Marie Ngougoue Ngougoue — Mathematician</title>
-  <meta name="description" content="Personal academic page: Bio, Research in PDEs and fluid–structure interaction, Teaching, Publications, Talks, Contact." />
+  <meta name="description" content="Bio, research in PDEs & fluid–structure interaction, publications, teaching, talks, contact." />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <!-- MathJax for LaTeX rendering -->
   <script>
@@ -12,70 +12,71 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <style>
-    :root { --bg:#0b1020; --card:#111733; --ink:#e9ecf1; --muted:#b9c0d0; --accent:#7aa2ff; }
-    *{box-sizing:border-box}
-    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif; background:linear-gradient(180deg,#090e1a,#0b1020 40%); color:var(--ink)}
-    .wrap{max-width:980px;margin:0 auto;padding:32px 20px}
-    header{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
-    .avatar{width:96px;height:96px;border-radius:50%;background:#223;box-shadow:0 0 0 3px #223, 0 10px 30px rgba(0,0,0,.35);object-fit:cover}
-    h1{font-size:clamp(28px,5vw,40px);margin:0}
-    .role{color:var(--muted);margin-top:-4px}
-    nav{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-    nav a{padding:8px 12px;border:1px solid #2a335a;border-radius:999px;color:var(--ink);text-decoration:none}
-    nav a:hover{border-color:var(--accent);color:var(--accent)}
-
-    /* --- layout --- */
-    .grid{display:grid;gap:22px;margin-top:18px}
-    @media (min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-
-    .card{background:var(--card); border:1px solid #24305a; border-radius:16px; padding:18px; box-shadow:0 10px 40px rgba(0,0,0,.25)}
-    h2{margin:0 0 10px 0; font-size:22px}
-    h3{margin:10px 0 6px 0; font-size:16px; color:var(--muted)}
-    a{color:var(--accent)}
-    ul{margin:10px 0 0 18px}
-    .pub{margin:0 0 12px 0}
-    .tag{display:inline-block;padding:3px 10px;border:1px solid #2a335a;border-radius:999px;margin-right:8px;font-size:12px;color:var(--muted)}
-    footer{margin:40px 0 10px 0; color:#a7afc4; font-size:14px}
-    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
-    .badge{display:inline-block;background:rgba(122,162,255,.12);border:1px solid #2d3b6b;color:var(--accent);padding:4px 10px;border-radius:10px;font-size:12px}
-
-    /* make Bio compact and not touch nav */
-    #bio.card{padding:14px;margin-top:6px}
-
-    /* Ensure right column aligns to same right edge and trims extra space */
-    aside.card{align-self:start}
-    .links-body{display:grid;gap:8px}
-    .links-body ul{margin:0 0 6px 18px}
-
-    /* Full-width figure card */
-    .fullwidth{grid-column:1 / -1}
-
-    /* Numbered publications as [n] */
-    ol.publist{counter-reset: pub}
-    ol.publist li{list-style:none;margin:8px 0}
-    ol.publist li::before{
-      counter-increment: pub;
-      content:"[" counter(pub) "] ";
-      font-weight:600;
-      margin-right:6px;
+    :root{
+      --bg:#ffffff; --ink:#1a1a1a; --muted:#6b7280; --link:#0f62fe; --border:#e5e7eb; --highlight:#f9fafb;
+      --max:980px; --col-left:260px; --col-gap:32px; --radius:12px;
     }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif; color:var(--ink); background:var(--bg)}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
 
-    /* Teaching bullets with comfy spacing */
-    ul.teaching li{margin:6px 0}
+    .page{max-width:var(--max); margin:0 auto; padding:28px 18px}
+    .layout{display:grid; grid-template-columns: var(--col-left) 1fr; gap:var(--col-gap)}
 
-    /* Image placeholder style */
-    .imgbox{border:1px dashed #2a335a;border-radius:12px;padding:12px;text-align:center;margin-top:6px}
-    .imgbox img{max-width:100%;border-radius:10px}
+    /* Left sidebar (sticky) */
+    .aside{position:sticky; top:24px; align-self:start}
+    .name{font-size:26px; font-weight:700; margin:0}
+    .subtitle{color:var(--muted); margin:4px 0 14px}
+    .avatar{width:96px; height:96px; border-radius:12px; object-fit:cover; background:#ddd; display:block; margin:0 0 14px}
+    .nav{display:flex; flex-direction:column; gap:6px; margin-top:8px}
+    .nav a{padding:8px 10px; border-radius:8px; border:1px solid transparent}
+    .nav a:hover{background:var(--highlight); border-color:var(--border)}
+
+    /* Right content */
+    main{min-width:0}
+    section{padding:18px; border:1px solid var(--border); border-radius:var(--radius); background:#fff; margin-bottom:18px}
+    h2{margin:0 0 10px; font-size:22px}
+    h3{margin:12px 0 8px; font-size:16px; color:var(--muted)}
+    p{margin:8px 0}
+    code{background:#f3f4f6; padding:2px 6px; border-radius:6px}
+
+    /* Full-width figure inside content column */
+    .figure{padding:0; overflow:hidden}
+    .figure img{width:100%; height:auto; display:block}
+    .figure .cap{padding:12px 16px; color:var(--muted); border-top:1px solid var(--border)}
+
+    /* Publication list [n] */
+    ol.publist{counter-reset: pub; padding-left:0; margin:0}
+    ol.publist li{list-style:none; margin:10px 0}
+    ol.publist li::before{counter-increment: pub; content:"[" counter(pub) "] "; font-weight:600;}
+
+    /* Teaching bullets */
+    ul.bullets{margin:6px 0 0 20px}
+    ul.bullets li{margin:6px 0}
+
+    /* Footer */
+    footer{color:var(--muted); font-size:14px; margin-top:24px}
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .layout{grid-template-columns: 1fr;}
+      .aside{position:static}
+      .nav{flex-direction:row; flex-wrap:wrap; gap:8px; margin-top:12px}
+      .nav a{border:1px solid var(--border)}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img class="avatar" src="portrait.jpg" alt="Portrait of Pierre Marie Ngougoue Ngougoue" />
-      <div>
-        <h1>Pierre Marie Ngougoue Ngougoue</h1>
-        <div class="role">Research Assistant · Partial Differential Equations · <span class="badge">Available for seminars</span></div>
-        <nav>
+  <div class="page">
+    <div class="layout">
+      <!-- LEFT: sticky profile / nav -->
+      <aside class="aside">
+        <img src="portrait.jpg" alt="Portrait" class="avatar" />
+        <h1 class="name">Pierre Marie Ngougoue Ngougoue</h1>
+        <div class="subtitle">Research Assistant · PDEs & Fluid–Structure Interaction</div>
+        <nav class="nav">
           <a href="#bio">Bio</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
@@ -84,123 +85,87 @@
           <a href="#contact">Contact</a>
           <a href="CV.pdf">CV</a>
         </nav>
-      </div>
-    </header>
-
-    <!-- BIO — compact -->
-    <section id="bio" class="card">
-      <h2>Bio</h2>
-      <p><em>Mathematician by accident. It's been a complicated, mostly unrequited relationship ever since — I blame bad initial conditions.</em></p>
-    </section>
-
-    <!-- 2-column block: Research (left), Links (right). The figure is moved below as full-width -->
-    <section class="grid">
-      <article id="research" class="card">
-        <h2>Research</h2>
-        <p>I work on the mathematical analysis of <strong>fluid–structure interactions (FSI)</strong> and related <strong>PDE</strong> systems. A current focus is <strong>barotropic compressible fluid–shell interactions</strong> and local well-posedness questions.</p>
-
-        <h3>Model equations (rendered with MathJax)</h3>
-        <p><strong>Compressible Navier–Stokes (barotropic):</strong></p>
-        <p>
-          $$\\begin{aligned}
-          &\\partial_t \\rho + \\nabla\\!\\cdot(\\rho u)=0,\\\\
-          &\\partial_t(\\rho u) + \\nabla\\!\\cdot(\\rho u\\otimes u) + \\nabla p(\\rho) = \\mu \\Delta u + (\\lambda+\\mu)\\nabla(\\nabla\\!\\cdot u),
-          \\end{aligned}$$
-          with $p=p(\\rho)$ barotropic, viscosity coefficients $\\mu>0$, $\\lambda+\\tfrac{2}{3}\\mu\\ge0$.
-        </p>
-
-        <p><strong>Elastic shell (linear Koiter-type, schematic):</strong></p>
-        <p>
-          $$\\rho_s\\, \\partial_{tt} \\eta + \\mathcal{K}\\eta + \\mathcal{D}\\partial_t\\eta = \\big(\\sigma(u,\\rho)\\, n\\big)\\!\\cdot n \\;\\;\\text{on }\\Gamma,$$
-          where $\\eta$ is the shell displacement, $\\mathcal{K}$ the elastic operator, $\\mathcal{D}$ damping, and the right-hand side is the normal fluid traction on the interface $\\Gamma$.
-        </p>
-
-        <h3>Latest preprint</h3>
-        <p>
-          Local well-posedness of barotropic compressible Fluid–Shell interactions —
-          <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>.
-        </p>
-
-        <div>
-          <span class="tag">PDE</span>
-          <span class="tag">Fluid–Structure Interaction</span>
-          <span class="tag">Compressible flow</span>
-          <span class="tag">Well-posedness</span>
-        </div>
-      </article>
-
-      <aside class="card">
-        <h2>Links</h2>
-        <div class="links-body">
-          <ul>
-            <li><a href="#">Google Scholar</a></li>
-            <li><a href="#">ORCID</a></li>
-            <li><a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv</a></li>
-            <li><a href="#">GitHub</a></li>
-          </ul>
-          <h3>Quick contact</h3>
-          <p><span class="mono">ngougoue.pierre@aims-cameroon.org</span></p>
-          <p>Fakultät für Mathematik, Universität Duisburg–Essen,<br> Thea-Leymann Straße 9, 45127 Essen, Germany</p>
-        </div>
       </aside>
 
-      <!-- Full-width figure card BELOW the 2-column row -->
-      <figure id="fsi-figure" class="card fullwidth">
-        <h2>FSI Illustration</h2>
-        <div class="imgbox">
-          <p><strong>Upload an image named <code>fsi-deformation.jpg</code></strong> showing shell deformation under fluid load.</p>
-          <img src="fsi-deformation.jpg" alt="Fluid–structure interaction deformation illustration (placeholder)">
-        </div>
-      </figure>
-    </section>
+      <!-- RIGHT: content -->
+      <main>
+        <section id="bio">
+          <h2>Bio</h2>
+          <p><em>Mathematician by accident. It's been a complicated, mostly unrequited relationship ever since — I blame bad initial conditions.</em></p>
+        </section>
 
-    <!-- Numbered publications [n] -->
-    <section id="publications" class="card">
-      <h2>Publications</h2>
-      <ol class="publist">
-        <li><strong>Local well-posedness of barotropic compressible Fluid–Shell interactions</strong> — under review (preprint:
-          <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>).
-        </li>
-      </ol>
-    </section>
+        <section id="research">
+          <h2>Research</h2>
+          <p>I work on the mathematical analysis of <strong>fluid–structure interactions (FSI)</strong> and related <strong>PDE</strong> systems. A current focus is <strong>barotropic compressible fluid–shell interactions</strong> and local well-posedness questions.</p>
+          <h3>Model equations (MathJax)</h3>
+          <p><strong>Compressible Navier–Stokes (barotropic):</strong></p>
+          <p>
+            $$\begin{aligned}
+            &\partial_t \rho + \nabla\!\cdot(\rho u)=0,\\
+            &\partial_t(\rho u) + \nabla\!\cdot(\rho u\otimes u) + \nabla p(\rho) = \mu \Delta u + (\lambda+\mu)\nabla(\nabla\!\cdot u),
+            \end{aligned}$$
+            with $p=p(\rho)$ barotropic, viscosity coefficients $\mu>0$, $\lambda+\tfrac{2}{3}\mu\ge0$.
+          </p>
+          <p><strong>Elastic shell (linear Koiter-type, schematic):</strong></p>
+          <p>
+            $$\rho_s\, \partial_{tt} \eta + \mathcal{K}\eta + \mathcal{D}\partial_t\eta = \big(\sigma(u,\rho)\, n\big)\!\cdot n \;\;\text{on }\Gamma, $$
+            where $\eta$ is the shell displacement, $\mathcal{K}$ the elastic operator, $\mathcal{D}$ damping, and the right-hand side is the normal fluid traction on the interface $\Gamma$.
+          </p>
+          <h3>Latest preprint</h3>
+          <p>Local well-posedness of barotropic compressible Fluid–Shell interactions —
+            <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>.
+          </p>
+        </section>
 
-    <!-- Teaching with bullet points -->
-    <section id="teaching" class="card">
-      <h2>Teaching</h2>
-      <p>I run a mathematics YouTube channel with advanced lectures in a more digestible way. Topics include:</p>
-      <ul class="teaching">
-        <li>Functional Analysis</li>
-        <li>Optimal Control</li>
-        <li>Calculus of Variations</li>
-        <li>Stochastics</li>
-      </ul>
-      <p>Channel: <a href="http://www.youtube.com/@MathXploreInfinity" target="_blank" rel="noopener">@MathXploreInfinity</a></p>
-    </section>
+        <section id="figure" class="figure">
+          <img src="fsi-deformation.jpg" alt="FSI deformation illustration placeholder" />
+          <div class="cap">Upload an image named <code>fsi-deformation.jpg</code> that illustrates shell deformation under fluid load.</div>
+        </section>
 
-    <section id="talks" class="card">
-      <h2>Talks</h2>
-      <ul>
-        <li>November 2024 — Oberseminar AG Mathematische Modellierung, TU Clausthal —
-          <em>“Random elliptic quasi-variational inequalities and risk-averse optimal control”</em> —
-          <a href="slides.pdf">slides</a>
-        </li>
-      </ul>
-    </section>
+        <section id="publications">
+          <h2>Publications</h2>
+          <ol class="publist">
+            <li><strong>Local well-posedness of barotropic compressible Fluid–Shell interactions</strong> — under review (preprint: <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>).</li>
+          </ol>
+        </section>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>I am easily reachable by email. Invitations for talks, collaborations, consultations, or guidance are welcome.</p>
-    </section>
+        <section id="teaching">
+          <h2>Teaching</h2>
+          <p>I run a mathematics YouTube channel with advanced lectures presented in an accessible way. Topics include:</p>
+          <ul class="bullets">
+            <li>Functional Analysis</li>
+            <li>Optimal Control</li>
+            <li>Calculus of Variations</li>
+            <li>Stochastics</li>
+          </ul>
+          <p>Channel: <a href="http://www.youtube.com/@MathXploreInfinity" target="_blank" rel="noopener">@MathXploreInfinity</a></p>
+        </section>
 
-    <footer>
-      © <span id="year"></span> Pierre Marie Ngougoue Ngougoue. Last updated: <span id="updated"></span> — Built with GitHub Pages.
-    </footer>
+        <section id="talks">
+          <h2>Talks</h2>
+          <ul class="bullets">
+            <li>November 2024 — Oberseminar AG Mathematische Modellierung, TU Clausthal — <em>“Random elliptic quasi-variational inequalities and risk-averse optimal control”</em> — <a href="slides.pdf">slides</a></li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>I am easily reachable by email. Invitations for talks, collaborations, consultations, or guidance are welcome.</p>
+          <p><span class="mono">ngougoue.pierre@aims-cameroon.org</span></p>
+          <p>Fakultät für Mathematik, Universität Duisburg–Essen, Thea-Leymann Straße 9, 45127 Essen, Germany</p>
+        </section>
+
+        <footer>
+          © <span id="year"></span> Pierre Marie Ngougoue Ngougoue · Last updated: <span id="updated"></span>
+        </footer>
+      </main>
+    </div>
   </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const d = new Date(document.lastModified);
-    document.getElementById('updated').textContent = d.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'2-digit'});
+    document.getElementById('updated').textContent = d.toLocaleDateString('en-GB', {year:'numeric', month:'long', day:'2-digit'});
   </script>
 </body>
 </html>
