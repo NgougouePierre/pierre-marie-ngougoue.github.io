@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Votre Nom — Mathématicien·ne</title>
+  <meta name="description" content="Page personnelle de mathématiques : recherche, enseignement, publications, contact." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']] }, svg: { fontCache: 'global' } };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root { --bg:#0b1020; --card:#111733; --ink:#e9ecf1; --muted:#b9c0d0; --accent:#7aa2ff; }
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif; background:linear-gradient(180deg,#090e1a,#0b1020 40%); color:var(--ink)}
+    .wrap{max-width:980px;margin:0 auto;padding:32px 20px}
+    header{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+    .avatar{width:96px;height:96px;border-radius:50%;background:#223;box-shadow:0 0 0 3px #223, 0 10px 30px rgba(0,0,0,.35);object-fit:cover}
+    h1{font-size:clamp(28px,5vw,40px);margin:0}
+    .role{color:var(--muted);margin-top:-4px}
+    nav{margin-top:18px;display:flex;gap:14px;flex-wrap:wrap}
+    nav a{padding:10px 14px;border:1px solid #2a335a;border-radius:999px;color:var(--ink);text-decoration:none}
+    nav a:hover{border-color:var(--accent);color:var(--accent)}
+    .grid{display:grid;gap:22px;margin-top:28px}
+    @media (min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
+    .card{background:var(--card); border:1px solid #24305a; border-radius:16px; padding:22px; box-shadow:0 10px 40px rgba(0,0,0,.25)}
+    h2{margin:0 0 10px 0; font-size:22px}
+    h3{margin:10px 0 6px 0; font-size:16px; color:var(--muted)}
+    a{color:var(--accent)}
+    ul{margin:10px 0 0 18px}
+    .pub{margin:0 0 12px 0}
+    .tag{display:inline-block;padding:3px 10px;border:1px solid #2a335a;border-radius:999px;margin-right:8px;font-size:12px;color:var(--muted)}
+    footer{margin:40px 0 10px 0; color:#a7afc4; font-size:14px}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+    .badge{display:inline-block;background:rgba(122,162,255,.12);border:1px solid #2d3b6b;color:var(--accent);padding:4px 10px;border-radius:10px;font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Remplacez la source par votre portrait (carré 512x512 recommandé) -->
+      <img class="avatar" src="portrait.jpg" alt="Portrait de Votre Nom" />
+      <div>
+        <h1>Votre Nom</h1>
+        <div class="role">Maître de conférences · Théorie des nombres · <span class="badge">Disponible pour séminaires</span></div>
+        <nav>
+          <a href="#recherche">Recherche</a>
+          <a href="#publications">Publications</a>
+          <a href="#enseignement">Enseignement</a>
+          <a href="#talks">Exposés</a>
+          <a href="#contact">Contact</a>
+          <a href="CV.pdf">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article id="recherche" class="card">
+        <h2>Recherche</h2>
+        <p>Je m'intéresse à la distribution des nombres premiers dans les progressions arithmétiques, aux formes modulaires et aux applications de la méthode du cercle. Dernier préprint : <a href="#">On gaps between primes in Beatty sequences</a> (2025).</p>
+        <h3>Preprint highlight (LaTeX rendu via MathJax)</h3>
+        <p>Nous montrons que pour tout $\epsilon>0$ il existe une infinité de $n$ tels que
+        $$ p_{n+1}-p_n \le n^{\tfrac{1}{2}+\epsilon}. $$</p>
+        <div>
+          <span class="tag">Analytique</span>
+          <span class="tag">Nombres premiers</span>
+          <span class="tag">Méthode du cercle</span>
+        </div>
+      </article>
+
+      <aside class="card">
+        <h2>Liens</h2>
+        <ul>
+          <li><a href="#">Google Scholar</a></li>
+          <li><a href="#">ORCID</a></li>
+          <li><a href="#">arXiv</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+        <h3>Contact rapide</h3>
+        <p><span class="mono">prenom.nom@univ-exemple.fr</span></p>
+        <p>Département de mathématiques, Université Exemple,<br> 12 rue des Mathématiques, 75000 Paris, France</p>
+      </aside>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Publications sélectionnées</h2>
+      <p class="pub"><strong>Title 1</strong> — Journal of Number Theory, 2024. Avec A. Coauthor. <a href="#">PDF</a> · <a href="#">arXiv</a></p>
+      <p class="pub"><strong>Title 2</strong> — Compositio Mathematica, 2023. <a href="#">PDF</a> · <a href="#">doi</a></p>
+      <p class="pub"><strong>Title 3</strong> — Ann. ENS, 2021. <a href="#">PDF</a></p>
+    </section>
+
+    <section id="enseignement" class="card">
+      <h2>Enseignement</h2>
+      <ul>
+        <li>2025 — Théorie analytique des nombres (M2) — polycopié et TD <a href="#">ici</a>.</li>
+        <li>2024 — Calcul différentiel (L3) — notes <a href="#">PDF</a>.</li>
+        <li>2023 — Introduction à Python pour mathématiciens (L1) — notebooks <a href="#">GitHub</a>.</li>
+      </ul>
+    </section>
+
+    <section id="talks" class="card">
+      <h2>Exposés & séminaires</h2>
+      <ul>
+        <li>Nov. 2025 — Séminaire de théorie des nombres, Université X — <a href="#">slides</a> · <a href="#">vidéo</a></li>
+        <li>Juin 2025 — Journées arithmétiques — <a href="#">abstract</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Le moyen le plus simple de me joindre est par e‑mail. Pour les invitations à parler, merci d'indiquer la date, le format souhaité et le public visé.</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Votre Nom. Dernière mise à jour : <span id="updated"></span> — Fait avec GitHub Pages.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const d = new Date(document.lastModified);
+    document.getElementById('updated').textContent = d.toLocaleDateString('fr-FR', {year:'numeric', month:'long', day:'2-digit'});
+  </script>
+</body>
+</html>
+
+Add initial index.html
