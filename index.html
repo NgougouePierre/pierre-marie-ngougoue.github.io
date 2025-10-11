@@ -162,12 +162,14 @@
   $$\eta : (t,\mathbf{y}) \in I \times \omega \;\longmapsto\; \eta(t,\mathbf{y}) \in \mathbb{R}, \quad I = [0,T), \; T>0,$$
   </p>
 
-  <p>where $\omega \subset \mathbb{R}^2$ represents the shell’s mid-surface. The mapping $\boldsymbol{\varphi}_{\eta} : \omega \to \partial\Omega_{\eta}$ parametrizes the boundary of the deformed domain. The shell dynamics are governed (schematically) by a <strong>Koiter-type equation</strong>:
+  <p>where $\omega \subset \mathbb{R}^2$ represents the shell’s mid-surface. The mapping $\boldsymbol{\varphi}_{\eta} : \omega \to \partial\Omega_{\eta}$ parametrizes the boundary of the deformed domain. The outward unit normals to the reference and deformed configurations are denoted by $\mathbf{n}$ and $\mathbf{n}_{\eta}$, respectively.
+    </p>
+        <p>The shell dynamics are governed (schematically) by a <strong>Koiter-type equation</strong>:
   </p>
 
   <p>
   $$\rho_s\,\partial_{tt}\eta + \mathcal{K}\eta + \mathcal{D}\,\partial_t\eta
-  = - \mathbf{n}^\intercal \big(\sigma(\mathbf{v},\rho)\,\mathbf{n}_{\eta}\big)\circ\boldsymbol{\varphi}_{\eta} \mathrm{det}{\nabla\boldsymbol{\varphi}_{\eta}}
+  = - \mathbf{n}^\intercal \big(\sigma(\mathbf{v},\rho)\,\mathbf{n}_{\eta}\big)\circ\boldsymbol{\varphi}_{\eta} \mathrm{det}\big(\nabla\boldsymbol{\varphi}_{\eta}\big)
   \quad \text{on } \omega,$$
   </p>
 
@@ -185,7 +187,9 @@
   \end{aligned}$$
   </p>
 
-  <p>where the pressure follows the <em>barotropic law</em> $p(\rho) = a\rho^{\gamma}$ with adiabatic exponent $\gamma > 1$ and $a>0$. The viscosity coefficients satisfy $\mu > 0$ and $\lambda + \tfrac{2}{3}\mu \ge 0$.</p>
+  <p>where the <strong>Newtonian rheological law</strong> gives the stress tensor as
+  $$\sigma(\mathbf{v},\rho) = \mu(\nabla \mathbf{v} + \nabla^\top \mathbf{v}) + (\lambda \nabla\!\cdot \mathbf{v} - p(\rho))\,\mathbf{I},$$
+  with viscosity coefficients $\mu > 0$, $\lambda + \tfrac{2}{3}\mu \ge 0$. The pressure follows the <em>barotropic law</em> $p(\rho) = a\rho^{\gamma}$, with $a>0$ and adiabatic exponent $\gamma > 1$.</p>
 
   <p>The coupling between the fluid and the shell is enforced through the <strong>kinematic boundary condition</strong> on the fixed interface $\omega$:
   $$\mathbf{v}\circ\boldsymbol{\varphi}_{\eta} = \partial_t \eta\, \mathbf{n},$$
@@ -193,10 +197,9 @@
 
   <h3>Analytical goal</h3>
 
-  <p>A central question concerns the <strong>well-posedness</strong> of this coupled PDE system: under what assumptions on the initial data, regularity, and physical parameters does the problem admit a unique local (or global) solution, and how does the interface geometry evolve in time? These questions are at the core of my current work, which combines tools from PDE theory, functional analysis, and geometric fluid mechanics.</p>
+  <p>A central question concerns the <strong>well-posedness</strong> of this coupled PDE system: under what assumptions on the initial data, regularity, and physical parameters does the problem admit a unique local (or global) strong solution.</p>
 
   <p>For further details, see my preprint: 
-          /*<h3>Latest preprint</h3>*/
           <p>Local well-posedness For Barotropic Compressible Fluid–Viscoelastic Shell interactions —
             <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>.
           </p>
