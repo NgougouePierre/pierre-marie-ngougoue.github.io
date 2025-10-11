@@ -29,7 +29,18 @@
     .aside{position:sticky; top:24px; align-self:start}
     .name{font-size:26px; font-weight:700; margin:0}
     .subtitle{color:var(--muted); margin:4px 0 14px}
-    .avatar{width:96px; height:96px; border-radius:12px; object-fit:cover; background:#ddd; display:block; margin:0 0 14px}
+    .avatar{
+  width: 180px;         /* larger portrait box */
+  height: 270px;        /* proportional to your 427×640 image (~2:3 ratio) */
+  border-radius: 16px;  /* slightly rounder corners for balance */
+  object-fit: cover;    /* ensures it fills the box nicely */
+  object-position: center top; /* optional: adjust visible crop area */
+  display: block;
+  background: #ddd;
+  margin: 0 0 18px;
+}
+<!--
+  .avatar{width:96px; height:96px; border-radius:12px; object-fit:cover; background:#ddd; display:block; margin:0 0 14px} -->
     .nav{display:flex; flex-direction:column; gap:6px; margin-top:8px}
     .nav a{padding:8px 10px; border-radius:8px; border:1px solid transparent}
     .nav a:hover{background:var(--highlight); border-color:var(--border)}
