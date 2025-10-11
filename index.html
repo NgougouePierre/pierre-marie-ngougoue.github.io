@@ -189,7 +189,7 @@
 
   <p>where the <strong>Newtonian rheological law</strong> gives the stress tensor as
   $$\sigma(\mathbf{v},\rho) = \mu\big(\nabla\mathbf{v}+(\nabla\mathbf{v})^\intercal\big) +\lambda\left(\nabla\cdot\mathbf{v}\right)\mathbb{I}_{3\times 3} - p(\rho)\mathbb I_{3\times 3},$$
-  with viscosity coefficients $\mu > 0$, $\lambda + \tfrac{2}{3}\mu \ge 0$. The pressure follows the <em>barotropic law</em> $p(\rho) = a\rho^{\gamma}$, with $a>0$ and adiabatic exponent $\gamma > 1$.</p>
+  with viscosity coefficients $\mu > 0$, $3\lambda + 2\mu \ge 0$. The pressure follows the <em>barotropic law</em> $p(\rho) = a\rho^{\gamma}$, with $a>0$ and adiabatic exponent $\gamma > 1$.</p>
 
   <p>The coupling between the fluid and the shell is enforced through the <strong>kinematic boundary condition</strong> on the fixed interface $\omega$:
   $$\mathbf{v}\circ\boldsymbol{\varphi}_{\eta} = \left(\partial_t \eta\right) \mathbf{n},$$
@@ -197,8 +197,8 @@
 
   <h3>Analytical goal</h3>
 
-  <p>A central question concerns the <strong>well-posedness</strong> of this coupled PDE system: under what assumptions on the initial data, regularity, and physical parameters does the problem admit a unique local (or global) strong solution.</p>
-
+  <p>A central question concerns the <strong>well-posedness</strong> of this coupled PDE system: under what assumptions on the initial data, regularity, and physical parameters does the problem admit a unique local (or global) strong solution? </p>
+  <p>Beyond local existence, particular emphasis is placed on suitable <strong>continuation criteria</strong> ensuring that a local strong solution persists globally in time. In the spirit of <em>Prodi–Serrin–Ladyzhenskaya</em> type conditions, such criteria typically require quantitative bounds on key physical quantities—like the density or deformation gradient—to prevent breakdown and guarantee global regularity. </p>
   <p>For further details, see my preprint: 
           <p>Local well-posedness For Barotropic Compressible Fluid–Viscoelastic Shell interactions —
             <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>.
