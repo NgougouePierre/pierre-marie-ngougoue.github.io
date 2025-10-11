@@ -14,7 +14,7 @@
   <style>
     :root{
       --bg:#ffffff; --ink:#1a1a1a; --muted:#6b7280; --link:#0f62fe; --border:#e5e7eb; --highlight:#f9fafb;
-      --max:980px; --col-left:260px; --col-gap:32px; --radius:12px;
+      --max:1180px; --col-left:420px; --col-gap:32px; --radius:12px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -31,7 +31,7 @@
     .subtitle{color:var(--muted); margin:4px 0 14px}
     .avatar{
   width: 100%;         /* larger portrait box */
-  height: 100%;        /* proportional to your 427×640 image (~2:3 ratio) */
+  height: auto;        /* proportional to your 427×640 image (~2:3 ratio) */
   border-radius: 20px;  /* slightly rounder corners for balance */
   object-fit: cover;    /* ensures it fills the box nicely */
   object-position: center top; /* optional: adjust visible crop area */
@@ -39,8 +39,8 @@
   background: #ddd;
   margin: 0 0 20px;
 }
-<!--
-  .avatar{width:96px; height:96px; border-radius:12px; object-fit:cover; background:#ddd; display:block; margin:0 0 14px} -->
+/*
+  .avatar{width:96px; height:96px; border-radius:12px; object-fit:cover; background:#ddd; display:block; margin:0 0 14px} */
     .nav{display:flex; flex-direction:column; gap:6px; margin-top:8px}
     .nav a{padding:8px 10px; border-radius:8px; border:1px solid transparent}
     .nav a:hover{background:var(--highlight); border-color:var(--border)}
