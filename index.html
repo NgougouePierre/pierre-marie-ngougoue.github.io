@@ -156,7 +156,7 @@
           <p>I work on the mathematical analysis of <strong>fluid–structure interactions (FSI)</strong> and related <strong>PDE</strong> systems. A current focus is <strong>barotropic compressible fluid–viscoleastic shell interactions</strong> and local well-posedness questions.</p>
           <h3>Model description</h3>
 
-  <p>We consider the interaction of a compressible fluid and a flexible shell, where the shell occupies a portion of the boundary of a fixed reference domain $\Omega \subset \mathbb{R}^3$. As the shell deforms, the fluid domain $\Omega$ transforms into the time-dependent deformed domain $\Omega_{\eta(t)}$ (see Figure&nbsp;1 below). The deformation of the shell is described by</p>
+  <p>We consider the interaction of a compressible fluid and a flexible shell, where the shell occupies a portion of the boundary of a fixed reference domain $\Omega \subset \mathbb{R}^3$. As the shell deforms, the fluid domain $\Omega$ transforms into the time-dependent deformed domain $\Omega_{\eta(t)}$ (see Figure&nbsp;1 below). The transversal deformation of the shell is described by</p>
 
   <p>
   $$\eta : (t,\mathbf{y}) \in I \times \omega \;\longmapsto\; \eta(t,\mathbf{y}) \in \mathbb{R}, \quad I = [0,T), \; T>0,$$
@@ -167,7 +167,7 @@
 
   <p>
   $$\rho_s\,\partial_{tt}\eta + \mathcal{K}\eta + \mathcal{D}\,\partial_t\eta
-  = - \big(\sigma(\mathbf{v},\rho)\,\mathbf{n}_{\eta}\big)\circ\boldsymbol{\varphi}_{\eta}\!\cdot \mathbf{n}_{\eta}
+  = - \mathbf{n}^\intercal \big(\sigma(\mathbf{v},\rho)\,\mathbf{n}_{\eta}\big)\circ\boldsymbol{\varphi}_{\eta} det{\nabla\boldsymbol{\varphi}_{\eta}}
   \quad \text{on } \omega,$$
   </p>
 
@@ -187,8 +187,8 @@
 
   <p>where the pressure follows the <em>barotropic law</em> $p(\rho) = a\rho^{\gamma}$ with adiabatic exponent $\gamma > 1$ and $a>0$. The viscosity coefficients satisfy $\mu > 0$ and $\lambda + \tfrac{2}{3}\mu \ge 0$.</p>
 
-  <p>The coupling between the fluid and the shell is enforced through the <strong>kinematic boundary condition</strong> on the moving interface $\partial\Omega_{\eta}(t)$:
-  $$\mathbf{v}|_{\partial\Omega_{\eta}(t)} = \partial_t \eta\, \mathbf{n}_{\eta},$$
+  <p>The coupling between the fluid and the shell is enforced through the <strong>kinematic boundary condition</strong> on the fixed interface $\omega$:
+  $$\mathbf{v}\circ\boldsymbol{\varphi}_{\eta} = \partial_t \eta\, \mathbf{n},$$
   which ensures that the normal component of the fluid velocity coincides with the velocity of the shell.</p>
 
   <h3>Analytical goal</h3>
