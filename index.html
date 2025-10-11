@@ -14,7 +14,7 @@
   <style>
     :root{
       --bg:#ffffff; --ink:#1a1a1a; --muted:#6b7280; --link:#0f62fe; --border:#e5e7eb; --highlight:#f9fafb;
-      --max:980px; --col-left:400px; --col-gap:32px; --radius:12px;
+      --max:980px; --col-left:260px; --col-gap:32px; --radius:12px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -30,14 +30,14 @@
     .name{font-size:26px; font-weight:700; margin:0}
     .subtitle{color:var(--muted); margin:4px 0 14px}
     .avatar{
-  width: 480px;         /* larger portrait box */
-  height: 670px;        /* proportional to your 427×640 image (~2:3 ratio) */
-  border-radius: 16px;  /* slightly rounder corners for balance */
+  width: 100%;         /* larger portrait box */
+  height: auto;        /* proportional to your 427×640 image (~2:3 ratio) */
+  border-radius: 20px;  /* slightly rounder corners for balance */
   object-fit: cover;    /* ensures it fills the box nicely */
   object-position: center top; /* optional: adjust visible crop area */
   display: block;
   background: #ddd;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 <!--
   .avatar{width:96px; height:96px; border-radius:12px; object-fit:cover; background:#ddd; display:block; margin:0 0 14px} -->
