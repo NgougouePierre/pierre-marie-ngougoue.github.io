@@ -43,6 +43,40 @@
     .nav a{padding:8px 10px; border-radius:8px; border:1px solid transparent}
     .nav a:hover{background:var(--highlight); border-color:var(--border)}
 
+    .actions{
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button{
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: var(--link);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.button:hover{
+  background: #0043ce; /* slightly darker blue */
+  text-decoration: none;
+}
+
+.button.secondary{
+  background: var(--highlight);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.button.secondary:hover{
+  background: #f3f4f6;
+}
+
+
     /* Right content */
     main{min-width:0}
     section{padding:18px; border:1px solid var(--border); border-radius:var(--radius); background:#fff; margin-bottom:18px}
@@ -105,7 +139,7 @@
   <p>I am a Research Assistant at the Universität Duisburg–Essen, where I study the analytical aspects of Partial Differential Equations (PDEs) with a focus on mathematical Fluid–Structure Interaction (FSI). My research aims to understand how coupled systems of fluids and elastic structures behave, particularly in compressible flow settings.</p>
    <p>My academic journey began at the <strong>African Institute for Mathematical Sciences (AIMS) — Cameroon</strong>, part of a pan-African network of excellence, where I obtained my first Master’s degree in Mathematics. Afterward, I joined a research group working on population genetics and mathematical biology. However, in a twist worthy of Darwin’s own theory of fitness, I dropped out after a year and a half — evidently, I wasn’t the fittest for survival in that ecosystem (or perhaps just too lazy to evolve further).</p>
 
-  <p>I later joined the <strong>Berlin Mathematical School</strong> and completed a second Master’s degree in Mathematics at <strong>Humboldt University of Berlin</strong>, focusing on <em>Optimal Control of PDEs</em>. That experience rekindled my interest in analysis and applied mathematics, eventually leading me toward my current work on fluid–structure interaction problems.</p>
+  <p>I later joined the <strong>Berlin Mathematical School (BMS)</strong> and completed a second Master’s degree in Mathematics at <strong>Humboldt University of Berlin</strong>, focusing on <em>Optimal Control of PDEs</em>. That experience rekindled my interest in analysis and applied mathematics, eventually leading me toward my current work on fluid–structure interaction problems.</p>
   <p>What draws me to this area is the balance between abstract theory and real physical intuition — how rigorous mathematics can describe complex mechanical phenomena. Beyond research, I’m deeply interested in teaching and communicating mathematics. I run the YouTube channel <a href="http://www.youtube.com/@MathXploreInfinity" target="_blank" rel="noopener"><em>@MathXploreInfinity</em></a>, where I share accessible lectures on advanced mathematical topics.</p>
 
           <div class="actions">
