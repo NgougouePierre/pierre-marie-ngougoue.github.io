@@ -153,23 +153,51 @@
 
         <section id="research">
           <h2>Research</h2>
-          <p>I work on the mathematical analysis of <strong>fluid–structure interactions (FSI)</strong> and related <strong>PDE</strong> systems. A current focus is <strong>barotropic compressible fluid–shell interactions</strong> and local well-posedness questions.</p>
-          <h3>Model equations (MathJax)</h3>
-          <p><strong>Compressible Navier–Stokes (barotropic):</strong></p>
-          <p>
-            $$\begin{aligned}
-            &\partial_t \rho + \nabla\!\cdot(\rho u)=0,\\
-            &\partial_t(\rho u) + \nabla\!\cdot(\rho u\otimes u) + \nabla p(\rho) = \mu \Delta u + (\lambda+\mu)\nabla(\nabla\!\cdot u),
-            \end{aligned}$$
-            with $p=p(\rho)$ barotropic, viscosity coefficients $\mu>0$, $\lambda+\tfrac{2}{3}\mu\ge0$.
-          </p>
-          <p><strong>Elastic shell (linear Koiter-type, schematic):</strong></p>
-          <p>
-            $$\rho_s\, \partial_{tt} \eta + \mathcal{K}\eta + \mathcal{D}\partial_t\eta = \big(\sigma(u,\rho)\, n\big)\!\cdot n \;\;\text{on }\Gamma, $$
-            where $\eta$ is the shell displacement, $\mathcal{K}$ the elastic operator, $\mathcal{D}$ damping, and the right-hand side is the normal fluid traction on the interface $\Gamma$.
-          </p>
-          <h3>Latest preprint</h3>
-          <p>Local well-posedness of barotropic compressible Fluid–Shell interactions —
+          <p>I work on the mathematical analysis of <strong>fluid–structure interactions (FSI)</strong> and related <strong>PDE</strong> systems. A current focus is <strong>barotropic compressible fluid–viscoleastic shell interactions</strong> and local well-posedness questions.</p>
+          <h3>Model description</h3>
+
+  <p>We consider the interaction of a compressible fluid and a flexible shell, where the shell occupies a portion of the boundary of a fixed reference domain $\Omega \subset \mathbb{R}^3$. As the shell deforms, the fluid domain $\Omega$ transforms into the time-dependent deformed domain $\Omega_{\eta}(t)$ (see Figure&nbsp;1 below). The deformation of the shell is described by</p>
+
+  <p>
+  $$\eta : (t,\mathbf{y}) \in I \times \omega \;\longmapsto\; \eta(t,\mathbf{y}) \in \mathbb{R}, \quad I = [0,T), \; T>0,$$
+  </p>
+
+  <p>where $\omega \subset \mathbb{R}^2$ represents the shell’s mid-surface. The mapping $\boldsymbol{\phi}_{\eta} : \omega \to \partial\Omega_{\eta}(t)$ parametrizes the boundary of the deformed domain. The shell dynamics are governed (schematically) by a <strong>Koiter-type equation</strong>:
+  </p>
+
+  <p>
+  $$\rho_s\,\partial_{tt}\eta + \mathcal{K}\eta + \mathcal{D}\,\partial_t\eta
+  = \big(\sigma(\mathbf{v},\rho)\,n_{\eta}\big)\!\cdot n_{\eta}
+  \quad \text{on } \omega,$$
+  </p>
+
+  <p>where $\rho_s$ is the surface density of the shell, $\mathcal{K}$ represents the elastic operator, $\mathcal{D}$ a structural damping term, and $\sigma(\mathbf{v},\rho)$ denotes the Cauchy stress tensor of the fluid. The right-hand side expresses the normal component of the fluid traction acting on the shell. Periodic boundary conditions in space are assumed.</p>
+
+  <h3>Fluid equations</h3>
+
+  <p>In the moving domain $\Omega_{\eta}(t)$, the motion of the barotropic compressible fluid is described by the <strong>compressible Navier–Stokes system</strong>:</p>
+
+  <p>
+  $$\begin{aligned}
+  &\text{(Continuity equation)} && \partial_t \rho + \nabla\!\cdot(\rho \mathbf{v}) = 0,\\[4pt]
+  &\text{(Momentum equation)} && \partial_t(\rho \mathbf{v}) + \nabla\!\cdot(\rho \mathbf{v}\otimes \mathbf{v}) + \nabla p(\rho)
+    = \mu \Delta \mathbf{v} + (\lambda+\mu)\nabla(\nabla\!\cdot \mathbf{v}),
+  \end{aligned}$$
+  </p>
+
+  <p>where the pressure follows the <em>barotropic law</em> $p(\rho) = a\rho^{\gamma}$ with adiabatic exponent $\gamma > 1$ and $a>0$. The viscosity coefficients satisfy $\mu > 0$ and $\lambda + \tfrac{2}{3}\mu \ge 0$.</p>
+
+  <p>The coupling between the fluid and the shell is enforced through the <strong>kinematic boundary condition</strong> on the moving interface $\partial\Omega_{\eta}(t)$:
+  $$\mathbf{v}|_{\partial\Omega_{\eta}(t)} = \partial_t \eta\, n_{\eta},$$
+  which ensures that the normal component of the fluid velocity coincides with the velocity of the shell.</p>
+
+  <h3>Analytical goal</h3>
+
+  <p>A central question concerns the <strong>well-posedness</strong> of this coupled PDE system: under what assumptions on the initial data, regularity, and physical parameters does the problem admit a unique local (or global) solution, and how does the interface geometry evolve in time? These questions are at the core of my current work, which combines tools from PDE theory, functional analysis, and geometric fluid mechanics.</p>
+
+  <p>For further details, see my preprint: 
+          /*<h3>Latest preprint</h3>*/
+          <p>Local well-posedness For Barotropic Compressible Fluid–Viscoelastic Shell interactions —
             <a href="https://arxiv.org/abs/2510.03936" target="_blank" rel="noopener">arXiv:2510.03936</a>.
           </p>
         </section>
